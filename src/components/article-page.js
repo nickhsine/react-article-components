@@ -82,20 +82,20 @@ const BodyBlock = styled(HorizontalCentered)`
 `
 
 const AsideBlock = styled.div`
-  flex: 1 1 ${props => props.columns * mockup.desktop.column.width}px;
+  flex: 0 1 ${props => props.columns * mockup.desktop.column.width}px;
   padding-right: ${mockup.desktop.column.paddingRight}px;
 
   ${mq.hdOnly`
-    flex: 1 1 ${props => props.columns * mockup.hd.column.width}px;
+    flex: 0 1 ${props => props.columns * mockup.hd.column.width}px;
     padding-right: ${mockup.hd.column.paddingRight}px;
   `}
 `
 
 const ContentBlock = styled.div`
-  flex: 1 1 ${props => props.columns * mockup.desktop.column.width}px;
+  flex: 0 1 ${props => props.columns * mockup.desktop.column.width}px;
 
   ${mq.hdOnly`
-    flex: 1 1 ${props => props.columns * mockup.hd.column.width}px;
+    flex: 0 1 ${props => props.columns * mockup.hd.column.width}px;
   `}
 `
 
