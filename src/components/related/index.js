@@ -52,7 +52,7 @@ const UpperSeparationLine = styled(SeparationLine)`
 `
 
 const List = styled.div`
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
 `
 
