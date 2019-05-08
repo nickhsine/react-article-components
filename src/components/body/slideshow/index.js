@@ -62,6 +62,8 @@ const duration = 300
 const defaultCurIndex = 0
 
 const SlideshowFlexBox = styled.div`
+  margin-top: 60px;
+  margin-bottom: 60px;
   max-width: ${mockup.desktop.container.width}px;
   width: 100%;
   display: flex;
