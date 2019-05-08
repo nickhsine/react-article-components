@@ -32,9 +32,9 @@ const mockup = {
 
 const defaultColors = {
   primary: {
-    text: '#55e07f',
-    line: '#70f197',
-    shape: '#73fa9c',
+    text: '#ef7ede',
+    line: '#fbafef',
+    shape: '#fabcf0',
   },
   secondary: {
     text: '#2440fb',
@@ -68,6 +68,7 @@ const HorizontalCentered = styled.div`
 const BodyBackground = styled.div`
   width: 100%;
   background-color: #fff;
+  padding-top: 60px;
 `
 
 const BodyBlock = styled(HorizontalCentered)`
