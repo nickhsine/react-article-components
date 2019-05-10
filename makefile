@@ -9,7 +9,7 @@ help:
 
 dev:
 	@echo "$(P) Start webpack-dev-server"
-	$(BIN_DIR)/webpack-dev-server
+	$(BIN_DIR)/webpack-dev-server --client-log-level info
 
 build: clean lint
 	@echo "$(P) Check dependencies of the project"
