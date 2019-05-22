@@ -43,7 +43,7 @@ const AnnotationContainer = styled.abbr`
 
 const AnnotatedText = styled.span`
   cursor: pointer;
-  color: ${props => props.theme.colors.annotation};
+  color: ${props => props.theme.colors.primary.text};
 `
 
 const Indicator = styled.span`
@@ -86,12 +86,12 @@ const Indicator = styled.span`
 
 const AnnotationContent = styled.div`
   display: ${props => (props.isExpanded ? 'block' : 'none')};
-  background: ${props => props.theme.colors.base.shape};
+  background: ${props => props.theme.colors.base.background};
   font-size: ${props => props.theme.fontSizeOffset + 16}px;
   line-height: 1.43;
   letter-spacing: 0.5px;
   font-weight: ${typography.font.weight.light};
-  border-top: 2px solid ${props => props.theme.colors.primary.line};
+  border-top: 2px solid ${props => props.theme.colors.primary.support};
   padding: 25px 11px;
   animation: ${slideDownAndFadeIn} 300ms ease;
 `

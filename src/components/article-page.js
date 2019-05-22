@@ -40,18 +40,17 @@ const mockup = {
 
 const defaultColors = {
   primary: {
-    text: '#ef7ede',
-    line: '#fbafef',
-    shape: '#fabcf0',
-  },
-  secondary: {
     text: '#355ed3',
+    accent: '#ef7ede',
+    support: '#fbafef',
+    background: '#fabcf0',
   },
   base: {
-    text: '#494949',
+    text: '#404040',
     lightText: '#808080',
-    line: '#d8d8d8',
-    shape: '#f4f4f4',
+    button: '#808080',
+    line: '#afafaf',
+    background: '#fff',
   },
 }
 
@@ -63,7 +62,7 @@ const BorderBox = styled.div`
 
 const BackgroundBlock = styled(BorderBox)`
   /* pass from ThemeProvider */
-  background-color: ${props => props.theme.colors.primary.shape};
+  background-color: ${props => props.theme.colors.primary.background};
 
   padding-left: 10px;
   padding-right: 10px;

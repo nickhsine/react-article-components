@@ -111,7 +111,7 @@ export default {
       position: absolute;
       bottom: 0;
       left: 0;
-      border-bottom: 2px solid ${props => props.theme.colors.primary.line};
+      border-bottom: 2px solid ${props => props.theme.colors.primary.support};
     }
 
     ${mq.tabletAndBelow`

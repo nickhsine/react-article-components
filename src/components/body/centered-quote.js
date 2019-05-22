@@ -42,7 +42,7 @@ const QuoteBy = styled.cite`
 const VerticalLine = styled.div`
   width: 2px;
   height: 80px;
-  background: ${props => props.theme.colors.primary.line};
+  background: ${props => props.theme.colors.primary.support};
   margin: 0 auto 40px auto;
 `
 

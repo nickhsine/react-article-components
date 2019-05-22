@@ -62,7 +62,7 @@ const CategoryFlex = styled.div`
 `
 
 const CategoryText = styled.div`
-  color: ${props => props.theme.colors.secondary.text};
+  color: ${props => props.theme.colors.primary.text};
   font-size: ${props => props.theme.fontSizeOffset + 16}px;
   line-height: 1;
   padding-left: 5px;
@@ -104,7 +104,7 @@ const AuthorJobTitle = styled.div`
 `
 
 const AuthorName = styled(AuthorJobTitle)`
-  color: ${props => props.theme.colors.secondary.text};
+  color: ${props => props.theme.colors.primary.text};
   font-size: ${props => props.theme.fontSizeOffset + 16}px;
   margin-left: 5px;
 
@@ -120,7 +120,7 @@ const RawAuthorText = styled.div`
 `
 
 const AngledSeparationLine = styled.div`
-  border-bottom: 0.5px solid ${props => props.theme.colors.primary.line};
+  border-bottom: 0.5px solid ${props => props.theme.colors.primary.support};
   width: 15px;
   transform: rotate(-45deg);
 `

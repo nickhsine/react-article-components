@@ -94,7 +94,7 @@ const TextBlock = styled.div`
 `
 
 const Category = styled.span`
-  color: ${props => props.theme.colors.primary.text};
+  color: ${props => props.theme.colors.primary.accent};
   font-size: 14px;
   font-weight: ${typography.font.weight.bold};
   line-height: 1.43;
@@ -109,7 +109,7 @@ const Title = styled.h3`
   font-size: 16px;
   font-weight: ${typography.font.weight.bold};
   line-height: 1.5;
-  color: #404040;
+  color: ${props => props.theme.colors.base.text};
   margin: 10px 0 0 0;
 
   ${mq.tabletAndBelow`

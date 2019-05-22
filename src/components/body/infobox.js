@@ -33,7 +33,7 @@ const Content = styled.div`
 
 const Container = styled.div`
   ${styles.body.width.large}
-  background: ${props => props.theme.colors.base.shape};
+  background: ${props => props.theme.colors.base.background};
   position: relative;
   margin: 60px auto 0 auto;
   ${mq.tabletAndBelow`
@@ -55,7 +55,7 @@ const Container = styled.div`
     position: absolute;
     right: -15px;
     top: 28px;
-    background: ${props => props.theme.colors.primary.line};
+    background: ${props => props.theme.colors.primary.support};
   }
   &::after {
     /*
@@ -71,7 +71,7 @@ const Container = styled.div`
     position: absolute;
     left: -6px;
     bottom: 22px;
-    background: ${props => props.theme.colors.primary.line};
+    background: ${props => props.theme.colors.primary.support};
   }
 `
 

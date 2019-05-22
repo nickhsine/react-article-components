@@ -20,7 +20,7 @@ const mockup = {
 
 const BackgroundBlock = styled.div`
   /* through ThemeProvider of styled-components */
-  background-color: ${props => props.theme.colors.primary.shape};
+  background-color: ${props => props.theme.colors.primary.background};
 
   width: 100%;
 
@@ -63,7 +63,7 @@ const TextBlock = styled.div`
 `
 
 const TopicTextBlock = styled.div`
-  background-color: ${props => props.theme.colors.primary.shape};
+  background-color: ${props => props.theme.colors.primary.accent};
   border: solid 2px #fff;
   display: inline-block;
 
@@ -73,7 +73,7 @@ const TopicTextBlock = styled.div`
   margin-bottom: 30px;
 
   /* through ThemeProvider of styled-components */
-  color: ${props => props.theme.colors.secondary.text};
+  color: ${props => props.theme.colors.primary.text};
   font-size: 20px;
   font-weight: bold;
   line-height: 1.8;
@@ -84,7 +84,7 @@ const TopicTextBlock = styled.div`
 
 const TitleTextBlock = styled.h1`
   /* through ThemeProvider of styled-components */
-  color: ${props => props.theme.colors.secondary.text};
+  color: ${props => props.theme.colors.primary.text};
 
   font-weight: bold;
   padding-left: 10px;
@@ -121,7 +121,7 @@ const TitleTextBlock = styled.h1`
 
 const SubtitleTextBlock = styled.h2`
   /* through ThemeProvider of styled-components */
-  color: ${props => props.theme.colors.secondary.text};
+  color: ${props => props.theme.colors.primary.text};
   display: block;
 
   font-size: 20px;

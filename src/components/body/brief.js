@@ -42,7 +42,7 @@ const Separation = styled.div`
     width: 270px;
   `}
   >svg>path {
-    fill: ${props => props.theme.colors.primary.line};
+    fill: ${props => props.theme.colors.primary.support};
   }
 `
 

@@ -174,7 +174,7 @@ const ImageNumberCircle = styled.div`
   display: inline-block;
   width: 80px;
   height: 80px;
-  background-color: ${props => props.theme.colors.primary.shape};
+  background-color: ${props => props.theme.colors.primary.support};
   border-radius: 50%;
   vertical-align: top;
 
@@ -343,7 +343,7 @@ const SlideMask = styled.div`
   top: 0;
   height: 100%;
   opacity: 0.55;
-  background: #2440fb;
+  background: ${props => props.theme.colors.primary.text};
 `
 
 const LeftSlideMask = styled(SlideMask)`
