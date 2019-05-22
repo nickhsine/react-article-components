@@ -26,7 +26,7 @@ const Content = styled.div`
   color: ${props => props.theme.colors.base.text};
   line-height: 1.75;
   letter-spacing: 0.5px;
-  font-weight: ${typography.font.weight.light};
+  font-weight: ${typography.font.weight.normal};
   font-size: ${props => props.theme.fontSizeOffset + 16}px;
   margin: 0 auto;
 `

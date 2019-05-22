@@ -74,11 +74,10 @@ const HorizontalCentered = styled.div`
 
 const BodyBackground = styled.div`
   width: 100%;
-  background-color: #fff;
+  background-color: #f4f4f4;
 `
 
 const BodyBlock = styled(HorizontalCentered)`
-
   ${mq.tabletAndBelow`
     display: block;
     width: 100%;

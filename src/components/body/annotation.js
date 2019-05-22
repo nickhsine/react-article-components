@@ -90,7 +90,7 @@ const AnnotationContent = styled.div`
   font-size: ${props => props.theme.fontSizeOffset + 16}px;
   line-height: 1.43;
   letter-spacing: 0.5px;
-  font-weight: ${typography.font.weight.light};
+  font-weight: ${typography.font.weight.normal};
   border-top: 2px solid ${props => props.theme.colors.primary.support};
   padding: 25px 11px;
   animation: ${slideDownAndFadeIn} 300ms ease;

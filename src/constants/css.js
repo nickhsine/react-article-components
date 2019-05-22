@@ -4,7 +4,7 @@ import typography from './typography'
 
 const paragraphText = css`
   font-size: ${props => props.theme.fontSizeOffset + 18}px;
-  font-weight: ${typography.font.weight.light};
+  font-weight: ${typography.font.weight.normal};
   line-height: 2.11;
   letter-spacing: 0.6px;
   color: ${props => props.theme.colors.base.text};

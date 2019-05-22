@@ -17,7 +17,7 @@ const Container = styled.div`
 const QuoteContent = styled.blockquote`
   ${styles.body.width.large}
   margin: 0 auto;
-  font-weight: ${typography.font.weight.light};
+  font-weight: ${typography.font.weight.normal};
   font-size: ${props => props.theme.fontSizeOffset + 32}px;
   line-height: 1.56;
   letter-spacing: 1.1px;
@@ -30,7 +30,7 @@ const QuoteBy = styled.cite`
   margin: 25px auto 0 auto;
   display: block;
   font-style: normal;
-  font-weight: ${typography.font.weight.light};
+  font-weight: ${typography.font.weight.normal};
   font-size: ${props => props.theme.fontSizeOffset + 16}px;
   line-height: 1.56;
   letter-spacing: 0.5px;

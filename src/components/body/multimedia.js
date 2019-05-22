@@ -101,7 +101,7 @@ export default {
     color: ${props => props.theme.colors.base.text};
     line-height: 1.36;
     letter-spacing: 0.5px;
-    font-weight: ${typography.font.weight.light};
+    font-weight: ${typography.font.weight.normal};
     font-size: 14px;
 
     // border-bottom of caption
