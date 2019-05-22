@@ -1,5 +1,5 @@
 import { getSrcsetString } from '../../utils/image'
-import PlaceholderIcon from './img-loading-placeholder.svg'
+import PlaceholderIcon from '../../assets/img-with-placeholder/img-loading-placeholder.svg'
 import PropTypes from 'prop-types'
 import predefinedPropTypes from '../../constants/prop-types/img-with-placeholder'
 import React from 'react'

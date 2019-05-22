@@ -1,5 +1,5 @@
-import NextArrowSvg from './next-arrow.svg'
-import PreArrowSvg from './pre-arrow.svg'
+import NextArrowSvg from '../../../assets/body/slideshow/next-arrow.svg'
+import PreArrowSvg from '../../../assets/body/slideshow/pre-arrow.svg'
 import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
 import get from 'lodash/get'
