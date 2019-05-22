@@ -1,8 +1,8 @@
-import Img from '../shared/img-with-placeholder'
+import Img from '../img-with-placeholder'
 import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
 import mq from '../../utils/media-query'
-import predefinedPropTypes from '../shared/img-with-placeholder/prop-types'
+import predefinedPropTypes from '../../constants/prop-types/img-with-placeholder'
 import styled from 'styled-components'
 
 const mockup = {

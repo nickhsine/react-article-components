@@ -1,4 +1,4 @@
-import Img from '../shared/img-with-placeholder'
+import Img from '../img-with-placeholder'
 import predefinedPropTypes from '../../constants/prop-types/body'
 import predefinedStyled from './styled'
 import React, { PureComponent } from 'react'

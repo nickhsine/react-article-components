@@ -5,7 +5,7 @@ import React from 'react'
 import get from 'lodash/get'
 import map from 'lodash/map'
 import mq from '../../utils/media-query'
-import predefinedProps from './prop-types'
+import predefinedProps from '../../constants/prop-types/related'
 import styled from 'styled-components'
 
 const _ = {

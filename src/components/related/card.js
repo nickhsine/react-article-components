@@ -1,7 +1,7 @@
-import Img from '../shared/img-with-placeholder'
+import Img from '../img-with-placeholder'
 import React from 'react'
 import mq from '../../utils/media-query'
-import predefinedProps from './prop-types'
+import predefinedProps from '../../constants/prop-types/related'
 import styled from 'styled-components'
 import typography from '../../constants/typography'
 
