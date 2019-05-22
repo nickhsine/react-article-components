@@ -1,6 +1,6 @@
 import Img from '../img-with-placeholder'
+import Multimedia from './multimedia'
 import predefinedPropTypes from '../../constants/prop-types/body'
-import predefinedStyled from './styled'
 import React, { PureComponent } from 'react'
 import get from 'lodash/get'
 
@@ -12,8 +12,8 @@ const imgProps = {
   itemProp: 'contentUrl',
 }
 
-const Container = predefinedStyled.Multimedia.Block
-const Caption = predefinedStyled.Multimedia.Caption
+const Container = Multimedia.Block
+const Caption = Multimedia.Caption
 
 export default class Image extends PureComponent {
   static propTypes = {

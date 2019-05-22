@@ -1,3 +1,4 @@
+import Multimedia from '../multimedia'
 import NextArrowSvg from '../../../assets/body/slideshow/next-arrow.svg'
 import PreArrowSvg from '../../../assets/body/slideshow/pre-arrow.svg'
 import PropTypes from 'prop-types'
@@ -5,7 +6,6 @@ import React, { PureComponent } from 'react'
 import get from 'lodash/get'
 import map from 'lodash/map'
 import mq from '../../../utils/media-query'
-import predefinedStyled from '../styled'
 import styled from 'styled-components'
 
 const _ = {
@@ -246,11 +246,9 @@ const ImageTotal = styled(ImageNumber)`
   `}
 `
 
-const Desc = styled(predefinedStyled.Multimedia.Caption)`
+const Desc = styled(Multimedia.Caption)`
   align-self: flex-start;
-  position: relative;
   display: inline-block;
-  transform: none;
 
   ${mq.tabletAndBelow`
     order: 4;
@@ -262,6 +260,8 @@ const Desc = styled(predefinedStyled.Multimedia.Caption)`
   `}
 
   ${mq.desktopAndAbove`
+    position: relative;
+    transform: none;
     padding-top: 30px;
   `}
 `
