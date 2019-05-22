@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import TextIcon from './assets/tool-text.svg'
 import mq from '../../utils/media-query'
-import predefinedProps from './prop-types'
+import predefinedProps from '../../constants/prop-types/aside'
 import styled from 'styled-components'
 
 const ToolsBlock = styled.div`

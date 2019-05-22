@@ -1,7 +1,7 @@
 import Metadata from './metadata'
 import React from 'react'
 import Tools from './tools'
-import predefinedProps from './prop-types'
+import predefinedProps from '../../constants/prop-types/aside'
 import styled from 'styled-components'
 import { Waypoint } from 'react-waypoint'
 

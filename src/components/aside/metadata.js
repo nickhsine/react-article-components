@@ -1,9 +1,9 @@
-import predefinedProps from './prop-types'
 import React, { PureComponent } from 'react'
 import map from 'lodash/map'
+import mq from '../../utils/media-query'
+import predefinedProps from '../../constants/prop-types/aside'
 import sortBy from 'lodash/sortBy'
 import styled, { css } from 'styled-components'
-import mq from '../../utils/media-query'
 
 const _ = {
   map,
