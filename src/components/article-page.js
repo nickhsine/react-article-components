@@ -12,7 +12,7 @@ import get from 'lodash/get'
 import map from 'lodash/map'
 import merge from 'lodash/merge'
 import mq from '../utils/media-query'
-import predefinedPropTypes from '../constants/prop-types'
+import predefinedPropTypes from '../constants/prop-types/article-page'
 import sortBy from 'lodash/sortBy'
 import styled, { ThemeProvider } from 'styled-components'
 

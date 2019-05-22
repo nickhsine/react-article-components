@@ -1,5 +1,5 @@
 import React from 'react'
-import predefinedPropTypes from '../../constants/prop-types'
+import predefinedPropTypes from '../../constants/prop-types/body'
 import styled from 'styled-components'
 // lodash
 import forEach from 'lodash/forEach'

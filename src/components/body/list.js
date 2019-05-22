@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import predefinedPropTypes from '../../constants/prop-types'
+import predefinedPropTypes from '../../constants/prop-types/body'
 import styles from '../../constants/css'
 // lodash
 import get from 'lodash/get'

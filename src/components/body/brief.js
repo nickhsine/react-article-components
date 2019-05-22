@@ -1,5 +1,5 @@
 import mq from '../../utils/media-query'
-import predefinedPropTypes from '../../constants/prop-types'
+import predefinedPropTypes from '../../constants/prop-types/body'
 import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
 import styled from 'styled-components'

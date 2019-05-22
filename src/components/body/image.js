@@ -1,5 +1,5 @@
 import Img from '../shared/img-with-placeholder'
-import predefinedPropTypes from '../../constants/prop-types'
+import predefinedPropTypes from '../../constants/prop-types/body'
 import predefinedStyled from './styled'
 import React, { PureComponent } from 'react'
 import get from 'lodash/get'
