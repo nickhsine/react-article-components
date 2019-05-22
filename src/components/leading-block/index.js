@@ -24,25 +24,10 @@ const BackgroundBlock = styled.div`
 
   width: 100%;
 
-  // 108px is the header height
-  ${mq.mobileOnly`
-    padding-top: ${props => props.paddingTop || '108px'};
-
-    height: auto;
-  `}
-
-  // 153px is the header height of tablet version
-  ${mq.tabletOnly`
-    padding-top: ${props => props.paddingTop || '153px'};
-
-    height: auto;
-  `}
-
   ${mq.desktopAndAbove`
-    padding: ${props => props.paddingTop || '108px'}
-      10px 18px 10px;
+    padding: 0 10px 18px 10px;
 
-    height: 100vh;
+    height: ${props => `calc(100vh - ${props.paddingTop || '108px'})`};
   `}
 `
 
