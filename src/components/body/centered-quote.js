@@ -10,13 +10,10 @@ const _ = {
   get,
 }
 
-const Container = styled.div`
-  margin: 40px auto 80px auto;
-`
-
 const QuoteContent = styled.blockquote`
-  ${styles.body.width.large}
-  margin: 0 auto;
+  // clear default margin
+  margin: 0;
+
   font-weight: ${typography.font.weight.normal};
   font-size: ${props => props.theme.fontSizeOffset + 32}px;
   line-height: 1.56;
@@ -26,7 +23,6 @@ const QuoteContent = styled.blockquote`
 `
 
 const QuoteBy = styled.cite`
-  ${styles.body.width.large}
   margin: 25px auto 0 auto;
   display: block;
   font-style: normal;
@@ -56,11 +52,11 @@ export default class CenteredQuote extends PureComponent {
     const content = _.get(data, ['content', 0, 'quote'])
     const by = _.get(data, ['content', 0, 'by'])
     return content ? (
-      <Container>
+      <div>
         <VerticalLine />
         <QuoteContent dangerouslySetInnerHTML={{ __html: content }} />
         {by ? <QuoteBy dangerouslySetInnerHTML={{ __html: by }} /> : null}
-      </Container>
+      </div>
     ) : null
   }
 }

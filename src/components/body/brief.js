@@ -14,11 +14,6 @@ const _ = {
   map,
 }
 
-const Container = styled.div`
-  ${styles.body.width.large}
-  margin: 0 auto;
-`
-
 const Content = styled.div`
   p {
     color: ${props => props.theme.colors.base.text};
@@ -91,10 +86,10 @@ export default class Brief extends PureComponent {
     const { data } = this.props
     const elements = _.map(data, this._buildContentElement).filter(Boolean)
     return elements.length > 0 ? (
-      <Container>
+      <div>
         <Content>{elements}</Content>
         <Separation>{curve}</Separation>
-      </Container>
+      </div>
     ) : null
   }
 }

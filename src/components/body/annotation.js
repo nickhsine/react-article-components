@@ -23,10 +23,8 @@ const slideDownAndFadeIn = keyframes`
 `
 
 const Container = styled.div`
-  ${styles.body.width.normal}
   ${styles.paragraphText}
   ${styles.linkChildren}
-  margin: 2.62em auto 2.62em auto;
   &:first-child {
     margin-top: 0;
   }

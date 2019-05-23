@@ -5,7 +5,6 @@ import styled from 'styled-components'
 import forEach from 'lodash/forEach'
 import get from 'lodash/get'
 import merge from 'lodash/merge'
-import mq from '../../utils/media-query'
 
 const _ = {
   forEach,
@@ -15,14 +14,6 @@ const _ = {
 
 const Container = styled.div`
   overflow: visible;
-  margin-top: 40px;
-  margin-bottom: 40px;
-
-  ${mq.tabletAndBelow`
-    max-width: 513px;
-    margin-left: auto;
-    margin-right: auto;
-  `}
 `
 
 const Embedded = styled.div`

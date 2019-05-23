@@ -11,11 +11,6 @@ const _ = {
   map,
 }
 
-const Container = styled.div`
-  ${styles.body.width.normal}
-  margin: 0 auto;
-`
-
 const listStyle = css`
   ${styles.paragraphText}
   margin-block-start: 0;
@@ -55,9 +50,9 @@ const buildList = ordered => {
       return null
     }
     return (
-      <Container>
+      <div>
         <L>{_.map(listItems, buildLi)}</L>
-      </Container>
+      </div>
     )
   }
   List.propTypes = {

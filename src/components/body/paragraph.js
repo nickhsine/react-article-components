@@ -10,10 +10,8 @@ const _ = {
 }
 
 const P = styled.p`
-  ${styles.body.width.normal}
   ${styles.paragraphText}
   ${styles.linkChildren}
-  margin: 2.62em auto 2.62em auto;
 `
 
 export default function Paragraph({ data }) {

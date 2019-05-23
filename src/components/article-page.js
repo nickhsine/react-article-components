@@ -23,21 +23,6 @@ const _ = {
   sortBy,
 }
 
-const mockup = {
-  desktop: {
-    column: {
-      width: 188, // px
-      paddingRight: 4, // px
-    },
-  },
-  hd: {
-    column: {
-      width: 267, // px
-      paddingRight: 6, // px
-    },
-  },
-}
-
 const defaultColors = {
   primary: {
     text: '#355ed3',
@@ -68,48 +53,51 @@ const BackgroundBlock = styled(BorderBox)`
   padding-right: 10px;
 `
 
-const HorizontalCentered = styled.div`
-  margin: 0 auto;
-`
-
 const BodyBackground = styled.div`
   width: 100%;
   background-color: #f4f4f4;
-`
-
-const BodyBlock = styled(HorizontalCentered)`
-  ${mq.tabletAndBelow`
-    display: block;
-    width: 100%;
-  `}
-
   ${mq.desktopOnly`
-    display: flex;
-    width: ${props => props.columns * mockup.desktop.column.width}px;
     padding-top: 60px;
   `}
 
   ${mq.hdOnly`
-    display: flex;
-    width: ${props => props.columns * mockup.hd.column.width}px;
     padding-top: 55px;
   `}
 `
 
-const AsideBlock = styled.div`
+const BodyBlock = styled.div`
+  position: relative;
+  width: 100%;
 
+  ${mq.desktopOnly`
+    max-width: 1024px;
+    margin: 0 auto;
+  `}
+
+  ${mq.hdOnly`
+    max-width: 1440px;
+    margin: 0 auto;
+  `}
+`
+
+const AsideBlock = styled.div`
   ${mq.tabletAndBelow`
     display: none;
   `}
 
-  ${mq.tabletOnly`
-    flex: 1 1 ${props => props.columns * mockup.desktop.column.width}px;
-    padding-right: ${mockup.desktop.column.paddingRight}px;
+  ${mq.desktopAndAbove`
+    position: absolute;
+    height: 100%;
+  `}
+
+  ${mq.desktopOnly`
+    width: 180px;
+    left: 28px;
   `}
 
   ${mq.hdOnly`
-    flex: 0 1 ${props => props.columns * mockup.hd.column.width}px;
-    padding-right: ${mockup.hd.column.paddingRight}px;
+    width: 250px;
+    left: 53px;
   `}
 `
 
@@ -140,51 +128,22 @@ const ToolsBlock = styled.div`
 `
 
 const ContentBlock = styled.div`
+  margin: 0 auto;
+
   ${mq.tabletAndBelow`
     width: 100%;
   `}
-
   ${mq.desktopOnly`
-    flex: 1 1 ${props => props.columns * mockup.desktop.column.width}px;
+    width: 550px;
   `}
-
   ${mq.hdOnly`
-    flex: 0 1 ${props => props.columns * mockup.hd.column.width}px;
+    width: 730px;
   `}
 `
 
-const BlockSizing = styled.div`
-  ${mq.tabletAndBelow`
-    width: 100%;
-  `}
-
-  ${mq.desktopOnly`
-    width: ${props => props.columns * mockup.desktop.column.width}px;
-  `}
-
-  ${mq.hdOnly`
-    width: ${props => props.columns * mockup.hd.column.width}px;
-  `}
-`
-
-const RelatedBlock = styled(BlockSizing)`
+const RelatedBlock = styled(BodyBlock)`
   margin: 80px auto 0 auto;
 `
-
-function getColumns(type) {
-  switch (type) {
-    case 'small-image':
-    case 'image-link':
-    case 'image':
-    case 'imageDiff':
-    case 'imagediff':
-    case 'slideshow':
-    case 'youtube':
-      return 4
-    default:
-      return 3
-  }
-}
 
 const _fontLevel = {
   base: 'base',
@@ -307,8 +266,8 @@ export default class Article extends PureComponent {
               }}
             />
             <BodyBackground>
-              <BodyBlock columns={5}>
-                <AsideBlock columns={1}>
+              <BodyBlock>
+                <AsideBlock>
                   <Aside
                     categories={post.categories}
                     date={post.published_date}
@@ -336,25 +295,10 @@ export default class Article extends PureComponent {
                     <Tools onFontLevelChange={this.changeFontLevel} />
                   </ToolsBlock>
                 </MetadataAndToolsBlock>
-                <ContentBlock columns={4}>
+                <ContentBlock>
                   <Body
                     brief={_.get(post, 'brief.api_data')}
                     content={_.get(post, 'content.api_data')}
-                    renderBrief={(Brief, data) => {
-                      return (
-                        <BlockSizing columns={3}>
-                          <Brief data={data} />
-                        </BlockSizing>
-                      )
-                    }}
-                    renderElement={(Element, data) => {
-                      const columns = getColumns(_.get(data, 'type'))
-                      return (
-                        <BlockSizing columns={columns} key={data.id}>
-                          <Element data={data} />
-                        </BlockSizing>
-                      )
-                    }}
                   />
                 </ContentBlock>
                 <MetadataAndToolsBlock>
@@ -373,7 +317,7 @@ export default class Article extends PureComponent {
                   </ToolsBlock>
                 </MetadataAndToolsBlock>
               </BodyBlock>
-              <RelatedBlock columns={5}>
+              <RelatedBlock>
                 <Related data={relateds} />
               </RelatedBlock>
             </BodyBackground>

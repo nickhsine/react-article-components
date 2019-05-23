@@ -55,15 +55,15 @@ const mockup = {
   },
   hd: {
     container: {
-      width: 1063, // px
+      width: 1033, // px
     },
     slide: {
-      width: 966, // px
-      height: 603, // px
-      paddingRight: 5, // px
+      width: 938, // px
+      height: 585, // px
+      paddingRight: 4, // px
     },
     offset: {
-      left: 44, // px
+      left: 50, // px
     },
   },
 }
@@ -101,11 +101,11 @@ const SlideshowFlexBox = styled.div`
   `}
 
   ${mq.desktopOnly`
-    max-width: ${mockup.desktop.container.width}px;
+    width: ${mockup.desktop.container.width}px;
   `}
 
   ${mq.hdOnly`
-    max-width: ${mockup.hd.container.width}px;
+    width: ${mockup.hd.container.width}px;
   `}
 `
 
@@ -256,7 +256,7 @@ const Desc = styled(Multimedia.Caption)`
   `}
 
   ${mq.mobileOnly`
-    max-width: calc(180/375*100%);
+    width: calc(180/355*100%);
   `}
 
   ${mq.desktopAndAbove`
@@ -306,6 +306,7 @@ const SlidesFlexBox = styled.div`
 `
 
 const SlideFlexItem = styled.div`
+  height: 100%;
   flex-shrink: 0;
 
   ${mq.mobileOnly`

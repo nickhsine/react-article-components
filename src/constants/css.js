@@ -18,6 +18,21 @@ const linkChildren = css`
   }
 `
 
+const bodyExtendWidth = css`
+  ${mq.mobileOnly`
+    width: 100%;
+  `}
+  ${mq.tabletOnly`
+    width: 100%;
+  `}
+  ${mq.desktopOnly`
+    width: 752px;
+  `}
+  ${mq.hdOnly`
+    width: 1033px;
+  `}
+`
+
 const bodyLargeWidth = css`
   ${mq.mobileOnly`
     // 355 = 375 - 20(body border width)
@@ -55,6 +70,7 @@ export default {
     width: {
       normal: bodyNormalWidth,
       large: bodyLargeWidth,
+      extend: bodyExtendWidth,
     },
   },
   paragraphText,
