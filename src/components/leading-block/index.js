@@ -150,20 +150,12 @@ const FigureBlock = styled.figure`
     // 20px is border-(right|left) width of body
     width: calc(100% + 20px);
     padding-bottom: 75%;
+    margin-top: 40px;
 
     > .leading-image {
       position: absolute;
     }
   `}
-
-  ${mq.mobileOnly`
-    margin-top: 60px;
-  `}
-
-  ${mq.tabletOnly`
-    margin-top: 40px;
-  `}
-
 
   ${mq.desktopAndAbove`
     width: 100%;
