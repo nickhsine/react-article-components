@@ -148,14 +148,14 @@ const DescBlock = styled.div`
       font-size: 14px;
       line-height: 1.43;
       color: ${props => props.theme.colors.base.lightText};
-      background-color: #f1f1f1;
+      background-color: #fff;
       padding: 15px;
       border-radius: 4px;
       margin-top: 12px;
     }
   }
 
-  ${mq.desktopAndBelow`
+  ${mq.tabletAndBelow`
     display: none;
   `}
 `
