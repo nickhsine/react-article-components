@@ -89,7 +89,10 @@ function renderElement(data = {}) {
     case 'embeddedCode':
     case 'embeddedcode':
       return (
-        <BlockSizing blockWidth={_blockWidth.normal}>
+        <BlockSizing
+          blockWidth={_blockWidth.normal}
+          style={{ overflow: 'hidden' }}
+        >
           <Embedded data={data} />
         </BlockSizing>
       )
