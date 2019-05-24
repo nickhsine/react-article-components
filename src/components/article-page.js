@@ -2,12 +2,15 @@ import Aside from './aside'
 import Metadata from './aside/metadata'
 import Tools from './aside/tools'
 import Body from './body'
+import DonationBox from './donation-box'
 import DynamicComponentsContext from '../contexts/dynamic-components-context'
 import LeadingBlock from './leading-block'
+import License from './license'
 import Link from './link'
 import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
 import Related from './related'
+import SeparationCurve from './separation-curve'
 import get from 'lodash/get'
 import map from 'lodash/map'
 import merge from 'lodash/merge'
@@ -29,6 +32,12 @@ const defaultColors = {
     accent: '#ef7ede',
     support: '#fbafef',
     background: '#fabcf0',
+  },
+  secondary: {
+    text: '#a67a44',
+    accent: '#a67a44',
+    support: '#d0a67d',
+    background: '#c9af8e',
   },
   base: {
     text: '#404040',
@@ -317,6 +326,12 @@ export default class Article extends PureComponent {
                   </ToolsBlock>
                 </MetadataAndToolsBlock>
               </BodyBlock>
+              <DonationBox />
+              <License
+                license={post.copyright}
+                publishedDate={post.published_date}
+              />
+              <SeparationCurve />
               <RelatedBlock>
                 <Related data={relateds} />
               </RelatedBlock>
