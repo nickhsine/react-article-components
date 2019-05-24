@@ -102,7 +102,7 @@ export default {
     line-height: 1.36;
     letter-spacing: 0.5px;
     font-weight: ${typography.font.weight.normal};
-    font-size: 14px;
+    font-size: ${props => props.theme.fontSizeOffset + 14}px;
 
     // border-bottom of caption
     &:after {
