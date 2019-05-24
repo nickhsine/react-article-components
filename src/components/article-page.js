@@ -164,6 +164,14 @@ const _articleStyles = {
   interactive: 'interactive',
 }
 
+function getTopicHref(topicObj = {}) {
+  const slug = _.get(topicObj, 'slug')
+  if (slug) {
+    return `/topics/${slug}`
+  }
+  return null
+}
+
 export default class Article extends PureComponent {
   static propTypes = {
     colors: predefinedPropTypes.elementColors,
@@ -255,6 +263,8 @@ export default class Article extends PureComponent {
       }
     })
 
+    const topicHref = getTopicHref(post.topics)
+
     return (
       <ThemeProvider
         theme={{
@@ -278,6 +288,7 @@ export default class Article extends PureComponent {
               <BodyBlock>
                 <AsideBlock>
                   <Aside
+                    backToTopic={topicHref}
                     categories={post.categories}
                     date={post.published_date}
                     designers={post.designers}
@@ -301,7 +312,10 @@ export default class Article extends PureComponent {
                     rawAutherText={post.extend_byline}
                   />
                   <ToolsBlock>
-                    <Tools onFontLevelChange={this.changeFontLevel} />
+                    <Tools
+                      backToTopic={topicHref}
+                      onFontLevelChange={this.changeFontLevel}
+                    />
                   </ToolsBlock>
                 </MetadataAndToolsBlock>
                 <ContentBlock>
@@ -322,7 +336,10 @@ export default class Article extends PureComponent {
                     rawAutherText={post.extend_byline}
                   />
                   <ToolsBlock>
-                    <Tools onFontLevelChange={this.changeFontLevel} />
+                    <Tools
+                      backToTopic={topicHref}
+                      onFontLevelChange={this.changeFontLevel}
+                    />
                   </ToolsBlock>
                 </MetadataAndToolsBlock>
               </BodyBlock>

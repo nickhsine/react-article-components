@@ -1,4 +1,6 @@
+import BackToTopicIcon from '../../assets/aside/back-top-topic.svg'
 import BookmarkIcon from '../../assets/aside/tool-bookmark.svg'
+import DynamicComponentsContext from '../../contexts/dynamic-components-context'
 import FBIcon from '../../assets/aside/share-fb.svg'
 import LineIcon from '../../assets/aside/share-line.svg'
 import TwitterIcon from '../../assets/aside/share-twitter.svg'
@@ -94,7 +96,7 @@ export default class Tools extends React.PureComponent {
   static propTypes = predefinedProps.tools
 
   render() {
-    const { fbAppID, height, onFontLevelChange } = this.props
+    const { backToTopic, fbAppID, height, onFontLevelChange } = this.props
 
     return (
       <ToolsBlock height={height}>
@@ -109,6 +111,17 @@ export default class Tools extends React.PureComponent {
         />
         {/* TODO move bookmark widget out of twreporter-react repo */}
         <BookmarkIcon />
+        {backToTopic ? (
+          <DynamicComponentsContext.Consumer>
+            {components => {
+              return (
+                <components.Link to={backToTopic} target="_self">
+                  <BackToTopicIcon />
+                </components.Link>
+              )
+            }}
+          </DynamicComponentsContext.Consumer>
+        ) : null}
       </ToolsBlock>
     )
   }

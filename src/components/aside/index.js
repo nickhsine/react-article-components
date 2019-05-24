@@ -107,6 +107,7 @@ export default class Aside extends React.PureComponent {
     const toolsHeight = 220 // px
 
     const {
+      backToTopic,
       categories,
       date,
       designers,
@@ -145,6 +146,7 @@ export default class Aside extends React.PureComponent {
           </Waypoint>
           <ToolsPositioningBlock toolPosition={this.state.toolPosition}>
             <Tools
+              backToTopic={backToTopic}
               height={`${toolsHeight}px`}
               title={title}
               onFontLevelChange={onFontLevelChange}
