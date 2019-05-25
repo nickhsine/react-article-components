@@ -21,6 +21,8 @@ const AsideFlexBox = styled.aside`
 const ToolsFixedArea = styled.div`
   position: relative;
   flex-grow: 1;
+  margin-top: 90px;
+  margin-bottom: 90px;
 `
 
 const ToolsPositioningBlock = styled.div`
@@ -104,7 +106,7 @@ export default class Aside extends React.PureComponent {
   }
 
   render() {
-    const toolsHeight = 220 // px
+    const toolsHeight = 280 // px
 
     const {
       backToTopic,
