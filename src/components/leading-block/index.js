@@ -63,7 +63,7 @@ const TextBlock = styled.div`
 `
 
 const TopicTextBlock = styled.div`
-  background-color: ${props => props.theme.colors.primary.accent};
+  background-color: ${props => props.theme.colors.primary.support};
   border: solid 2px #fff;
   display: inline-block;
 

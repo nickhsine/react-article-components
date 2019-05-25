@@ -31,7 +31,7 @@ const defaultColors = {
     text: '#355ed3',
     accent: '#ef7ede',
     support: '#fbafef',
-    background: '#fabcf0',
+    background: '#fadaf5',
   },
   secondary: {
     text: '#a67a44',
