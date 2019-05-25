@@ -59,9 +59,9 @@ const Indicator = styled.span`
   &::after {
     content: '';
     width: 2px;
-    height: 7px;
+    height: 6.5px;
     top: 5px;
-    left: 6px;
+    left: 5px;
     transform: rotate(${props => (props.isExpanded ? '45deg' : '-45deg')});
     background: ${props => props.theme.colors.primary.text};
     display: block;
@@ -71,9 +71,9 @@ const Indicator = styled.span`
   &::before {
     content: '';
     width: 2px;
-    height: 7px;
+    height: 6.5px;
     top: 5px;
-    right: 6px;
+    right: 5px;
     transform: rotate(${props => (props.isExpanded ? '-45deg' : '45deg')});
     background: ${props => props.theme.colors.primary.text};
     display: block;
