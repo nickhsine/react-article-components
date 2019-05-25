@@ -164,10 +164,23 @@ const PrevButton = styled.div`
       width: 31px;
     }
   `}
+
+  &:hover {
+    > svg {
+      transform: translateX(-5px);
+      transition: transform 0.3s ease;
+    }
+  }
 `
 
 const NextButton = styled(PrevButton)`
   border-left: none;
+
+  &:hover {
+    > svg {
+      transform: translateX(5px);
+    }
+  }
 `
 
 const ImageNumberCircle = styled.div`
