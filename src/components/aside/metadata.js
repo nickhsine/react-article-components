@@ -138,6 +138,10 @@ const TagButton = styled.div`
   &:before {
     content: '#';
   }
+
+  &:hover {
+    background-color: #fff;
+  }
 `
 
 const TagsSection = styled.div`
