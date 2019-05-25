@@ -176,7 +176,7 @@ export default class Body extends PureComponent {
       : null
     return (
       <div>
-        <BriefBlock blockWidth={_blockWidth.large}>
+        <BriefBlock blockWidth={_blockWidth.normal}>
           <Brief data={brief} />
         </BriefBlock>
         {contentJsx}

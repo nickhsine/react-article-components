@@ -16,11 +16,11 @@ const _ = {
 
 const Content = styled.div`
   p {
-    color: ${props => props.theme.colors.base.text};
-    line-height: 1.73;
+    color: ${props => props.theme.colors.base.lightText};
+    line-height: 1.7;
     letter-spacing: 0.7px;
-    font-weight: ${typography.font.weight.normal};
-    font-size: ${props => props.theme.fontSizeOffset + 22}px;
+    font-weight: ${typography.font.weight.medium};
+    font-size: ${props => props.theme.fontSizeOffset + 20}px;
     margin: 0 0 1em 0;
     &:last-child {
       margin: 0;
