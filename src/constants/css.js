@@ -15,6 +15,12 @@ const linkChildren = css`
   a:visited,
   a:active {
     color: ${props => props.theme.colors.primary.text};
+    text-decoration: none;
+    border-bottom: 1px solid #d8d8d8;
+  }
+
+  a:hover {
+    border-color: ${props => props.theme.colors.primary.text};
   }
 `
 
