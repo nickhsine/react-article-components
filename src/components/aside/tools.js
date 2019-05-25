@@ -44,6 +44,28 @@ const ToolsBlock = styled.div`
   `}
 `
 
+const BackToTopicBlock = styled.div`
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '回到專題';
+    color: #7f7f7f;
+    font-size: 14px;
+    width: calc(14px * 4);
+    line-height: 23px;
+    margin-left: 5px;
+    opacity: 0;
+  }
+
+  &: hover {
+    &:after {
+      opacity: 1;
+      transition: opacity 0.2s ease;
+    }
+  }
+`
+
 function FBShareBT(props) {
   const handleClick = () => {
     const currentURL = window.location.href
@@ -116,7 +138,9 @@ export default class Tools extends React.PureComponent {
             {components => {
               return (
                 <components.Link to={backToTopic} target="_self">
-                  <BackToTopicIcon />
+                  <BackToTopicBlock>
+                    <BackToTopicIcon />
+                  </BackToTopicBlock>
                 </components.Link>
               )
             }}
