@@ -90,7 +90,7 @@ function renderElement(data = {}) {
     case 'embeddedcode':
       return (
         <BlockSizing
-          blockWidth={_blockWidth.normal}
+          blockWidth={_blockWidth.large}
           style={{ overflow: 'hidden' }}
         >
           <Embedded data={data} />
