@@ -277,6 +277,7 @@ export default class Article extends PureComponent {
             <LeadingBlock
               title={post.title}
               subtitle={post.subtitle}
+              topicHref={topicHref}
               topicName={_.get(post, 'topics.topic_name', '')}
               poster={{
                 mobile: _.get(post, 'hero_image.resized_targets.mobile', {}),

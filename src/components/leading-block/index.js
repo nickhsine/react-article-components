@@ -1,3 +1,4 @@
+import DynamicComponentsContext from '../../contexts/dynamic-components-context'
 import Img from '../img-with-placeholder'
 import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
@@ -174,23 +175,42 @@ export default class LeadingBlock extends PureComponent {
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string,
     topicName: PropTypes.string,
+    topicHref: PropTypes.string,
     paddingTop: PropTypes.string,
   }
 
   static defaultProps = {
     subtitle: '',
+    topicHref: '',
     topicName: '',
     paddingTop: '',
   }
 
   render() {
-    const { paddingTop, poster = {}, subtitle, title, topicName } = this.props
+    const {
+      paddingTop,
+      poster = {},
+      subtitle,
+      title,
+      topicHref,
+      topicName,
+    } = this.props
 
     return (
       <BackgroundBlock paddingTop={paddingTop}>
         <ContentBlock>
           <TextBlock>
-            {topicName ? <TopicTextBlock>{topicName}</TopicTextBlock> : null}
+            {topicName ? (
+              <DynamicComponentsContext.Consumer>
+                {components => {
+                  return (
+                    <components.Link to={topicHref}>
+                      <TopicTextBlock>{topicName}</TopicTextBlock>
+                    </components.Link>
+                  )
+                }}
+              </DynamicComponentsContext.Consumer>
+            ) : null}
             {subtitle ? (
               <SubtitleTextBlock>
                 <span>{subtitle}</span>
