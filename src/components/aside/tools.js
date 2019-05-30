@@ -19,6 +19,16 @@ const ToolsBlock = styled.div`
     cursor: pointer;
   }
 
+  svg:hover {
+    .darker-on-hover.darker-fill {
+      fill: #262626;
+    }
+
+    .darker-on-hover.darker-stroke {
+      stroke: #262626;
+    }
+  }
+
   ${mq.mobileOnly`
     width: 300px;
     margin-left: auto;
@@ -50,18 +60,17 @@ const BackToTopicBlock = styled.div`
   &:after {
     position: absolute;
     content: '回到專題';
-    color: #7f7f7f;
+    color: #262626;
     font-size: 14px;
     width: calc(14px * 4);
     line-height: 23px;
     margin-left: 5px;
-    opacity: 0;
+    visibility: hidden;
   }
 
-  &: hover {
+  &:hover {
     &:after {
-      opacity: 1;
-      transition: opacity 0.2s ease;
+      visibility: visible;
     }
   }
 `
