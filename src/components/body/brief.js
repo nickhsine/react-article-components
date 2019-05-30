@@ -15,11 +15,12 @@ const _ = {
 }
 
 const Content = styled.div`
+  font-family: source-han-serif-tc, serif;
   p {
     color: ${props => props.theme.colors.base.lightText};
     line-height: 1.7;
     letter-spacing: 0.7px;
-    font-weight: ${typography.font.weight.medium};
+    font-weight: ${typography.font.weight.semiBold};
     font-size: ${props => props.theme.fontSizeOffset + 20}px;
     margin: 0 0 1em 0;
     &:last-child {
