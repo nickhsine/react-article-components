@@ -10,7 +10,7 @@ import React from 'react'
 import TextIcon from '../../assets/aside/tool-text.svg'
 import mq from '../../utils/media-query'
 import predefinedProps from '../../constants/prop-types/aside'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 const ToolsBlock = styled.div`
   display: flex;
@@ -54,15 +54,28 @@ const ToolsBlock = styled.div`
   `}
 `
 
-const BackToTopicBlock = styled.div`
+function changeFontSizeOffsetToPect(fontSizeOffset) {
+  switch (fontSizeOffset) {
+    case 2: {
+      return '110%'
+    }
+    case 4: {
+      return '120%'
+    }
+    case 0:
+    default: {
+      return '100%'
+    }
+  }
+}
+
+const iconBlockCSS = css`
   position: relative;
 
   &:after {
     position: absolute;
-    content: '回到專題';
     color: #262626;
     font-size: 14px;
-    width: calc(14px * 4);
     line-height: 23px;
     margin-left: 5px;
     visibility: hidden;
@@ -72,6 +85,25 @@ const BackToTopicBlock = styled.div`
     &:after {
       visibility: visible;
     }
+  }
+`
+
+const TextIconBlock = styled.div`
+  ${iconBlockCSS}
+  cursor: pointer;
+
+  &:after {
+    width: calc(14px * 7);
+    content: '字級大小${props =>
+      changeFontSizeOffsetToPect(props.theme.fontSizeOffset)}';
+  }
+`
+
+const BackToTopicBlock = styled.div`
+  ${iconBlockCSS}
+  &:after {
+    width: calc(14px * 4);
+    content: '回到專題';
   }
 `
 
@@ -134,7 +166,9 @@ export default class Tools extends React.PureComponent {
         <FBShareBT appID={fbAppID || defaultFbAppID} />
         <TwitterShareBT />
         <LineShareBT />
-        <TextIcon onClick={onFontLevelChange} />
+        <TextIconBlock>
+          <TextIcon onClick={onFontLevelChange} />
+        </TextIconBlock>
         <PrintIcon
           onClick={() => {
             window.print()
